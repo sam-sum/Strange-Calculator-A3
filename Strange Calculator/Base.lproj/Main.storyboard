@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Strange_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="He1-QL-2He" userLabel="landscape Parent View">
@@ -22,6 +22,52 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape_S_Calc_background" translatesAutoresizingMaskIntoConstraints="NO" id="RQD-Sl-m9K">
                                         <rect key="frame" x="0.0" y="0.0" width="760" height="379"/>
                                     </imageView>
+                                    <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEu-sj-DQ4" userLabel="landscape ran">
+                                        <rect key="frame" x="10" y="315.33333333333331" width="54" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ZEu-sj-DQ4" secondAttribute="height" multiplier="1:1" id="dr3-sS-nhQ"/>
+                                            <constraint firstAttribute="width" constant="54" id="eMp-14-igc"/>
+                                            <constraint firstAttribute="height" constant="54" id="o1D-vL-b3d"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="ran">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="12" name="Helvetica-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="27"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="dr3-sS-nhQ"/>
+                                                <exclude reference="eMp-14-igc"/>
+                                                <exclude reference="o1D-vL-b3d"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="dr3-sS-nhQ"/>
+                                                <include reference="eMp-14-igc"/>
+                                                <include reference="o1D-vL-b3d"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="zDe-Iw-bD2"/>
+                                            <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eJd-ic-aq8"/>
+                                            <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="tsu-P7-eY2"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5o-TK-ODg" userLabel="landscape √x">
                                         <rect key="frame" x="74" y="323.33333333333331" width="48" height="48"/>
                                         <constraints>
@@ -48,6 +94,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="EHO-Ho-eFf"/>
+                                                <exclude reference="eT9-cV-0OX"/>
+                                                <exclude reference="lM3-TZ-cv7"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="EHO-Ho-eFf"/>
+                                                <include reference="eT9-cV-0OX"/>
+                                                <include reference="lM3-TZ-cv7"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Nkt-dN-YEV"/>
                                             <action selector="btnOperatorsUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bmg-Ah-UfA"/>
@@ -80,6 +140,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="7z8-gX-9UC"/>
+                                                <exclude reference="QPk-bs-Afq"/>
+                                                <exclude reference="ZLk-TQ-dl6"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="7z8-gX-9UC"/>
+                                                <include reference="QPk-bs-Afq"/>
+                                                <include reference="ZLk-TQ-dl6"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Gie-o5-CgL"/>
                                             <action selector="btnOperatorsUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NFV-K8-d9j"/>
@@ -112,6 +186,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="7W6-9j-WW6"/>
+                                                <exclude reference="QAX-So-7rZ"/>
+                                                <exclude reference="YCu-xX-Wbc"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="7W6-9j-WW6"/>
+                                                <include reference="QAX-So-7rZ"/>
+                                                <include reference="YCu-xX-Wbc"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="bQt-as-TOL"/>
                                             <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nYF-XK-Cvq"/>
@@ -142,6 +230,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="74J-Xv-1yc"/>
+                                                <exclude reference="NWz-Ut-qV5"/>
+                                                <exclude reference="VDl-hD-Vo5"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="74J-Xv-1yc"/>
+                                                <include reference="NWz-Ut-qV5"/>
+                                                <include reference="VDl-hD-Vo5"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="BhE-fQ-BJc"/>
                                             <action selector="btnOperatorsUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hNo-P5-VM9"/>
@@ -173,6 +275,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="9YK-lt-CyF"/>
+                                                <exclude reference="Zfv-zP-5NM"/>
+                                                <exclude reference="bGS-GK-3Tc"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="9YK-lt-CyF"/>
+                                                <include reference="Zfv-zP-5NM"/>
+                                                <include reference="bGS-GK-3Tc"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="vZf-Gs-d4k"/>
                                             <action selector="btnOperatorsUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6mX-pn-qEW"/>
@@ -203,6 +319,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Yhi-CV-ZNa"/>
+                                                <exclude reference="fPX-vB-Ti7"/>
+                                                <exclude reference="gnq-Il-Dmb"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Yhi-CV-ZNa"/>
+                                                <include reference="fPX-vB-Ti7"/>
+                                                <include reference="gnq-Il-Dmb"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="F5F-gj-sxv"/>
                                             <action selector="btnOperatorsUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lVe-65-Fx6"/>
@@ -234,6 +364,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Zkd-XU-yNF"/>
+                                                <exclude reference="b8m-kK-JsB"/>
+                                                <exclude reference="k7B-Ap-7jQ"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Zkd-XU-yNF"/>
+                                                <include reference="b8m-kK-JsB"/>
+                                                <include reference="k7B-Ap-7jQ"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="cQg-13-xSo"/>
                                             <action selector="btnOperatorsUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m8U-vO-FGY"/>
@@ -265,6 +409,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="1Rv-Lb-b6P"/>
+                                                <exclude reference="BdO-TP-8HN"/>
+                                                <exclude reference="i2l-DS-xjH"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="1Rv-Lb-b6P"/>
+                                                <include reference="BdO-TP-8HN"/>
+                                                <include reference="i2l-DS-xjH"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="zkw-MM-bMR"/>
                                             <action selector="btnOperatorsUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rXI-sZ-7ct"/>
@@ -295,6 +453,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="U4b-qj-4i1"/>
+                                                <exclude reference="Ygt-kf-1K4"/>
+                                                <exclude reference="siV-c2-Dsm"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="U4b-qj-4i1"/>
+                                                <include reference="Ygt-kf-1K4"/>
+                                                <include reference="siV-c2-Dsm"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="ypD-v4-ySl"/>
                                             <action selector="btnSpecialUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NMk-Vc-i4f"/>
@@ -331,6 +503,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="fQr-Of-3JW"/>
+                                                <exclude reference="jmY-dF-Qh7"/>
+                                                <exclude reference="pKW-zb-KZq"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="fQr-Of-3JW"/>
+                                                <include reference="jmY-dF-Qh7"/>
+                                                <include reference="pKW-zb-KZq"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Oam-86-W2O"/>
                                             <action selector="btnSpecialUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ktd-sV-Lpt"/>
@@ -363,6 +549,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="5hZ-Hx-Bud"/>
+                                                <exclude reference="9WO-cR-Wc1"/>
+                                                <exclude reference="zN1-dQ-XLC"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="5hZ-Hx-Bud"/>
+                                                <include reference="9WO-cR-Wc1"/>
+                                                <include reference="zN1-dQ-XLC"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Du5-IU-cz9"/>
                                             <action selector="btnOperatorsUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p7n-Ez-G5r"/>
@@ -395,6 +595,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="5be-2V-UX4"/>
+                                                <exclude reference="IrA-Y3-OPW"/>
+                                                <exclude reference="zC5-D5-OKy"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="5be-2V-UX4"/>
+                                                <include reference="IrA-Y3-OPW"/>
+                                                <include reference="zC5-D5-OKy"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="QFK-0X-N4Z"/>
                                             <action selector="btnOperatorsUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SB9-gr-cIc"/>
@@ -427,6 +641,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="7Lw-Wz-N6D"/>
+                                                <exclude reference="Lpk-Ys-1WD"/>
+                                                <exclude reference="Y7F-tq-oft"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="7Lw-Wz-N6D"/>
+                                                <include reference="Lpk-Ys-1WD"/>
+                                                <include reference="Y7F-tq-oft"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="G3E-MI-NJt"/>
                                             <action selector="btnOperatorsUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T3i-kG-8EC"/>
@@ -459,6 +687,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="MRn-Gg-Uqp"/>
+                                                <exclude reference="Mmw-Rx-OL4"/>
+                                                <exclude reference="dn2-mS-gdX"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="MRn-Gg-Uqp"/>
+                                                <include reference="Mmw-Rx-OL4"/>
+                                                <include reference="dn2-mS-gdX"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="lPR-fa-WbJ"/>
                                             <action selector="btnOperatorsUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vrs-SD-V3b"/>
@@ -491,6 +733,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="HFU-Rl-70v"/>
+                                                <exclude reference="LL1-1A-Hee"/>
+                                                <exclude reference="z7v-OO-du9"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="HFU-Rl-70v"/>
+                                                <include reference="LL1-1A-Hee"/>
+                                                <include reference="z7v-OO-du9"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="LfW-Wc-KWN"/>
                                             <action selector="btnOperatorsUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ham-wr-PJu"/>
@@ -521,6 +777,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="4II-cf-idz"/>
+                                                <exclude reference="FG3-aI-LBg"/>
+                                                <exclude reference="Zl4-Ne-hOF"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="4II-cf-idz"/>
+                                                <include reference="FG3-aI-LBg"/>
+                                                <include reference="Zl4-Ne-hOF"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="yoX-Nc-l7T"/>
                                             <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OnE-h4-YRE"/>
@@ -551,6 +821,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="KgB-fH-y74"/>
+                                                <exclude reference="TWv-dW-qOl"/>
+                                                <exclude reference="e5H-Jw-xJW"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="KgB-fH-y74"/>
+                                                <include reference="TWv-dW-qOl"/>
+                                                <include reference="e5H-Jw-xJW"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="G82-bs-yB6"/>
                                             <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eby-BS-mf7"/>
@@ -581,10 +865,68 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Bmw-mk-8Hg"/>
+                                                <exclude reference="bvT-n4-oD8"/>
+                                                <exclude reference="tQB-Ri-vyH"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Bmw-mk-8Hg"/>
+                                                <include reference="bvT-n4-oD8"/>
+                                                <include reference="tQB-Ri-vyH"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Ub3-jM-dLU"/>
                                             <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EoI-4g-1xl"/>
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="l5b-91-Q46"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Grs-1t-eOA" userLabel="landscape 7">
+                                        <rect key="frame" x="582" y="281.33333333333331" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Grs-1t-eOA" secondAttribute="height" multiplier="1:1" id="QdT-e9-fww"/>
+                                            <constraint firstAttribute="width" constant="40" id="eHn-0A-sY4"/>
+                                            <constraint firstAttribute="height" constant="40" id="iOJ-Xn-Z7n"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="7">
+                                                    <attributes>
+                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="QdT-e9-fww"/>
+                                                <exclude reference="eHn-0A-sY4"/>
+                                                <exclude reference="iOJ-Xn-Z7n"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="QdT-e9-fww"/>
+                                                <include reference="eHn-0A-sY4"/>
+                                                <include reference="iOJ-Xn-Z7n"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="4Zk-At-zH4"/>
+                                            <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jpl-hq-cvE"/>
+                                            <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="77f-8A-iNs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czM-mZ-a6A" userLabel="landscape 6">
@@ -611,6 +953,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="DXz-B2-CU4"/>
+                                                <exclude reference="PDi-5K-MAN"/>
+                                                <exclude reference="lsc-wD-ECD"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="DXz-B2-CU4"/>
+                                                <include reference="PDi-5K-MAN"/>
+                                                <include reference="lsc-wD-ECD"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="570-8d-iEZ"/>
                                             <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qgx-7t-mYM"/>
@@ -641,6 +997,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="V3P-Ac-CO1"/>
+                                                <exclude reference="bKD-84-siG"/>
+                                                <exclude reference="x96-ha-I9G"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="V3P-Ac-CO1"/>
+                                                <include reference="bKD-84-siG"/>
+                                                <include reference="x96-ha-I9G"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="TPm-Jt-JMR"/>
                                             <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wML-cy-SQ2"/>
@@ -671,6 +1041,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Red-fe-XAa"/>
+                                                <exclude reference="UPW-pl-wtp"/>
+                                                <exclude reference="k6M-Xf-ejA"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Red-fe-XAa"/>
+                                                <include reference="UPW-pl-wtp"/>
+                                                <include reference="k6M-Xf-ejA"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Wqm-Al-Sgh"/>
                                             <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Xv-B6-zor"/>
@@ -701,6 +1085,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="1KL-mR-GlB"/>
+                                                <exclude reference="60F-qZ-F4Y"/>
+                                                <exclude reference="TeN-Lh-HTk"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="1KL-mR-GlB"/>
+                                                <include reference="60F-qZ-F4Y"/>
+                                                <include reference="TeN-Lh-HTk"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Fu2-eP-qw5"/>
                                             <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="doA-vr-FPe"/>
@@ -731,6 +1129,20 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="OZm-RU-qwc"/>
+                                                <exclude reference="W91-yw-sjq"/>
+                                                <exclude reference="bht-pJ-Ge3"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="OZm-RU-qwc"/>
+                                                <include reference="W91-yw-sjq"/>
+                                                <include reference="bht-pJ-Ge3"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="aLW-7V-BO5"/>
                                             <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kaT-hO-x3X"/>
@@ -761,10 +1173,70 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="4IL-cZ-wMx"/>
+                                                <exclude reference="4gU-6f-GfN"/>
+                                                <exclude reference="zFR-B8-ZgK"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="4IL-cZ-wMx"/>
+                                                <include reference="4gU-6f-GfN"/>
+                                                <include reference="zFR-B8-ZgK"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="xok-6D-1eb"/>
                                             <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4yM-Tf-DDt"/>
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="Vvu-FX-dbY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfr-hk-2us" userLabel="landscape .">
+                                        <rect key="frame" x="723" y="241" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Hfr-hk-2us" secondAttribute="height" multiplier="1:1" id="Tzv-MT-XIU"/>
+                                            <constraint firstAttribute="width" constant="34" id="Un6-JF-5Qm"/>
+                                            <constraint firstAttribute="height" constant="34" id="yg1-Tj-6ba"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content=".">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="12" name="Helvetica-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Tzv-MT-XIU"/>
+                                                <exclude reference="Un6-JF-5Qm"/>
+                                                <exclude reference="yg1-Tj-6ba"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Tzv-MT-XIU"/>
+                                                <include reference="Un6-JF-5Qm"/>
+                                                <include reference="yg1-Tj-6ba"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="mmp-CH-ezq"/>
+                                            <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gho-UZ-kJt"/>
+                                            <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="QHK-Xb-p3P"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPQ-dg-Arm" userLabel="landscape LCD View">
@@ -798,6 +1270,16 @@
                                                     </fragment>
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Kjp-dh-aq5"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="Kjp-dh-aq5"/>
+                                                    </mask>
+                                                </variation>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.99885290859999998" green="0.8596545458" blue="0.50966590639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -823,6 +1305,30 @@
                                                 <exclude reference="P9b-HE-fyu"/>
                                                 <exclude reference="BgV-hG-f5M"/>
                                             </mask>
+                                            <mask key="constraints">
+                                                <exclude reference="jWl-Ig-fxV"/>
+                                                <exclude reference="uHi-FO-zMq"/>
+                                                <exclude reference="6Fx-7n-Lqa"/>
+                                                <exclude reference="BmO-oO-gx3"/>
+                                                <exclude reference="Jae-Fq-ffG"/>
+                                                <exclude reference="f8g-qV-eCy"/>
+                                                <exclude reference="j8T-6d-ln9"/>
+                                                <exclude reference="Ova-2R-vHs"/>
+                                                <exclude reference="f6J-kF-eM6"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="jWl-Ig-fxV"/>
+                                                <include reference="uHi-FO-zMq"/>
+                                                <include reference="6Fx-7n-Lqa"/>
+                                                <include reference="BmO-oO-gx3"/>
+                                                <include reference="Jae-Fq-ffG"/>
+                                                <include reference="f8g-qV-eCy"/>
+                                                <include reference="j8T-6d-ln9"/>
+                                                <include reference="Ova-2R-vHs"/>
+                                                <include reference="f6J-kF-eM6"/>
+                                            </mask>
                                         </variation>
                                         <variation key="heightClass=compact-widthClass=compact">
                                             <mask key="subviews">
@@ -831,100 +1337,6 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEu-sj-DQ4" userLabel="landscape ran">
-                                        <rect key="frame" x="10" y="315.33333333333331" width="54" height="54"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="ZEu-sj-DQ4" secondAttribute="height" multiplier="1:1" id="dr3-sS-nhQ"/>
-                                            <constraint firstAttribute="width" constant="54" id="eMp-14-igc"/>
-                                            <constraint firstAttribute="height" constant="54" id="o1D-vL-b3d"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="ran">
-                                                    <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" size="12" name="Helvetica-Bold"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="27"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="zDe-Iw-bD2"/>
-                                            <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eJd-ic-aq8"/>
-                                            <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="tsu-P7-eY2"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfr-hk-2us" userLabel="landscape .">
-                                        <rect key="frame" x="723" y="241" width="34" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Hfr-hk-2us" secondAttribute="height" multiplier="1:1" id="Tzv-MT-XIU"/>
-                                            <constraint firstAttribute="width" constant="34" id="Un6-JF-5Qm"/>
-                                            <constraint firstAttribute="height" constant="34" id="yg1-Tj-6ba"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content=".">
-                                                    <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" size="12" name="Helvetica-Bold"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="17"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="mmp-CH-ezq"/>
-                                            <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gho-UZ-kJt"/>
-                                            <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="QHK-Xb-p3P"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Grs-1t-eOA" userLabel="landscape 7">
-                                        <rect key="frame" x="582" y="281.33333333333331" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Grs-1t-eOA" secondAttribute="height" multiplier="1:1" id="QdT-e9-fww"/>
-                                            <constraint firstAttribute="width" constant="40" id="eHn-0A-sY4"/>
-                                            <constraint firstAttribute="height" constant="40" id="iOJ-Xn-Z7n"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="7">
-                                                    <attributes>
-                                                        <font key="NSFont" size="12" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="4Zk-At-zH4"/>
-                                            <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jpl-hq-cvE"/>
-                                            <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="77f-8A-iNs"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -992,6 +1404,7 @@
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="RQD-Sl-m9K"/>
+                                        <exclude reference="ZEu-sj-DQ4"/>
                                         <exclude reference="o5o-TK-ODg"/>
                                         <exclude reference="aDX-cS-A3W"/>
                                         <exclude reference="jwA-XX-leh"/>
@@ -1010,21 +1423,83 @@
                                         <exclude reference="p2M-P6-D9E"/>
                                         <exclude reference="19C-yS-C9g"/>
                                         <exclude reference="FA6-sD-Ei0"/>
+                                        <exclude reference="Grs-1t-eOA"/>
                                         <exclude reference="czM-mZ-a6A"/>
                                         <exclude reference="7S8-GV-3GL"/>
                                         <exclude reference="pbr-Vi-IvA"/>
                                         <exclude reference="INx-T8-z5g"/>
                                         <exclude reference="IMP-f3-JBB"/>
                                         <exclude reference="gXn-g0-6lH"/>
-                                        <exclude reference="VPQ-dg-Arm"/>
-                                        <exclude reference="ZEu-sj-DQ4"/>
                                         <exclude reference="Hfr-hk-2us"/>
-                                        <exclude reference="Grs-1t-eOA"/>
+                                        <exclude reference="VPQ-dg-Arm"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="fGC-gg-e0v"/>
+                                        <exclude reference="Lew-JS-9ay"/>
+                                        <exclude reference="n0v-p1-cTx"/>
+                                        <exclude reference="CSd-pO-W5P"/>
+                                        <exclude reference="L5T-Da-hto"/>
+                                        <exclude reference="gtl-Du-t8U"/>
+                                        <exclude reference="kUI-gV-uAO"/>
+                                        <exclude reference="2C0-Tj-RNo"/>
+                                        <exclude reference="AHf-Yr-o1n"/>
+                                        <exclude reference="Mtj-5e-ruU"/>
+                                        <exclude reference="W72-bE-GR8"/>
+                                        <exclude reference="WgF-I3-cok"/>
+                                        <exclude reference="ZPb-wE-Cwu"/>
+                                        <exclude reference="acw-n6-ZjY"/>
+                                        <exclude reference="df7-He-ZMd"/>
+                                        <exclude reference="fGa-9w-fv9"/>
+                                        <exclude reference="g4F-eS-Ufd"/>
+                                        <exclude reference="iem-Su-x8G"/>
+                                        <exclude reference="jQ6-I8-lip"/>
+                                        <exclude reference="lMl-a5-SVg"/>
+                                        <exclude reference="nGv-B8-9Nv"/>
+                                        <exclude reference="pNR-Jx-yiB"/>
+                                        <exclude reference="2Ol-at-r0U"/>
+                                        <exclude reference="fez-OF-f5r"/>
+                                        <exclude reference="ibO-yY-3MC"/>
+                                        <exclude reference="tOd-3L-UDC"/>
+                                        <exclude reference="Kkw-e3-Ndi"/>
+                                        <exclude reference="bs9-uG-MXf"/>
+                                        <exclude reference="POb-y8-YJJ"/>
+                                        <exclude reference="ydO-kk-5EH"/>
+                                        <exclude reference="g1h-3Z-V61"/>
+                                        <exclude reference="nUr-Dh-ptB"/>
+                                        <exclude reference="T3V-yV-8LJ"/>
+                                        <exclude reference="rXE-Ry-crl"/>
+                                        <exclude reference="UXJ-xY-AWY"/>
+                                        <exclude reference="fip-su-2sZ"/>
+                                        <exclude reference="Am5-Yw-ogv"/>
+                                        <exclude reference="Cmd-p5-Hfv"/>
+                                        <exclude reference="sG9-OV-wG3"/>
+                                        <exclude reference="9qq-vG-oUF"/>
+                                        <exclude reference="bNm-pw-g8W"/>
+                                        <exclude reference="IUy-Nq-tRd"/>
+                                        <exclude reference="UxE-4B-SX0"/>
+                                        <exclude reference="hPq-JQ-Jua"/>
+                                        <exclude reference="lbh-Ka-Btd"/>
+                                        <exclude reference="4Td-35-AZ4"/>
+                                        <exclude reference="OeE-Xg-iVL"/>
+                                        <exclude reference="NGR-fd-9Z9"/>
+                                        <exclude reference="kAc-jj-nEg"/>
+                                        <exclude reference="KHh-uF-rrP"/>
+                                        <exclude reference="diK-yt-snO"/>
+                                        <exclude reference="HIN-bc-5lF"/>
+                                        <exclude reference="L5q-zG-cRV"/>
+                                        <exclude reference="Wii-DE-BoL"/>
+                                        <exclude reference="rGP-lM-syG"/>
+                                        <exclude reference="0Pm-N2-2vV"/>
+                                        <exclude reference="8Q7-Yw-g1j"/>
+                                        <exclude reference="1MI-AD-U9t"/>
+                                        <exclude reference="HRq-Ph-oRp"/>
+                                        <exclude reference="Upw-fP-OAd"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
                                     <mask key="subviews">
                                         <include reference="RQD-Sl-m9K"/>
+                                        <include reference="ZEu-sj-DQ4"/>
                                         <include reference="o5o-TK-ODg"/>
                                         <include reference="aDX-cS-A3W"/>
                                         <include reference="jwA-XX-leh"/>
@@ -1043,16 +1518,77 @@
                                         <include reference="p2M-P6-D9E"/>
                                         <include reference="19C-yS-C9g"/>
                                         <include reference="FA6-sD-Ei0"/>
+                                        <include reference="Grs-1t-eOA"/>
                                         <include reference="czM-mZ-a6A"/>
                                         <include reference="7S8-GV-3GL"/>
                                         <include reference="pbr-Vi-IvA"/>
                                         <include reference="INx-T8-z5g"/>
                                         <include reference="IMP-f3-JBB"/>
                                         <include reference="gXn-g0-6lH"/>
-                                        <include reference="VPQ-dg-Arm"/>
-                                        <include reference="ZEu-sj-DQ4"/>
                                         <include reference="Hfr-hk-2us"/>
-                                        <include reference="Grs-1t-eOA"/>
+                                        <include reference="VPQ-dg-Arm"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="fGC-gg-e0v"/>
+                                        <include reference="Lew-JS-9ay"/>
+                                        <include reference="n0v-p1-cTx"/>
+                                        <include reference="CSd-pO-W5P"/>
+                                        <include reference="L5T-Da-hto"/>
+                                        <include reference="gtl-Du-t8U"/>
+                                        <include reference="kUI-gV-uAO"/>
+                                        <include reference="2C0-Tj-RNo"/>
+                                        <include reference="AHf-Yr-o1n"/>
+                                        <include reference="Mtj-5e-ruU"/>
+                                        <include reference="W72-bE-GR8"/>
+                                        <include reference="WgF-I3-cok"/>
+                                        <include reference="ZPb-wE-Cwu"/>
+                                        <include reference="acw-n6-ZjY"/>
+                                        <include reference="df7-He-ZMd"/>
+                                        <include reference="fGa-9w-fv9"/>
+                                        <include reference="g4F-eS-Ufd"/>
+                                        <include reference="iem-Su-x8G"/>
+                                        <include reference="jQ6-I8-lip"/>
+                                        <include reference="lMl-a5-SVg"/>
+                                        <include reference="nGv-B8-9Nv"/>
+                                        <include reference="pNR-Jx-yiB"/>
+                                        <include reference="2Ol-at-r0U"/>
+                                        <include reference="fez-OF-f5r"/>
+                                        <include reference="ibO-yY-3MC"/>
+                                        <include reference="tOd-3L-UDC"/>
+                                        <include reference="Kkw-e3-Ndi"/>
+                                        <include reference="bs9-uG-MXf"/>
+                                        <include reference="POb-y8-YJJ"/>
+                                        <include reference="ydO-kk-5EH"/>
+                                        <include reference="g1h-3Z-V61"/>
+                                        <include reference="nUr-Dh-ptB"/>
+                                        <include reference="T3V-yV-8LJ"/>
+                                        <include reference="rXE-Ry-crl"/>
+                                        <include reference="UXJ-xY-AWY"/>
+                                        <include reference="fip-su-2sZ"/>
+                                        <include reference="Am5-Yw-ogv"/>
+                                        <include reference="Cmd-p5-Hfv"/>
+                                        <include reference="sG9-OV-wG3"/>
+                                        <include reference="9qq-vG-oUF"/>
+                                        <include reference="bNm-pw-g8W"/>
+                                        <include reference="IUy-Nq-tRd"/>
+                                        <include reference="UxE-4B-SX0"/>
+                                        <include reference="hPq-JQ-Jua"/>
+                                        <include reference="lbh-Ka-Btd"/>
+                                        <include reference="4Td-35-AZ4"/>
+                                        <include reference="OeE-Xg-iVL"/>
+                                        <include reference="NGR-fd-9Z9"/>
+                                        <include reference="kAc-jj-nEg"/>
+                                        <include reference="KHh-uF-rrP"/>
+                                        <include reference="diK-yt-snO"/>
+                                        <include reference="HIN-bc-5lF"/>
+                                        <include reference="L5q-zG-cRV"/>
+                                        <include reference="Wii-DE-BoL"/>
+                                        <include reference="rGP-lM-syG"/>
+                                        <include reference="0Pm-N2-2vV"/>
+                                        <include reference="8Q7-Yw-g1j"/>
+                                        <include reference="1MI-AD-U9t"/>
+                                        <include reference="HRq-Ph-oRp"/>
+                                        <include reference="Upw-fP-OAd"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -2103,7 +2639,6 @@
                                 <exclude reference="2mD-S7-p6z"/>
                                 <exclude reference="JJU-Ab-Tnm"/>
                                 <exclude reference="3Fq-hH-5Uv"/>
-                                <exclude reference="Gnf-vX-wdf"/>
                                 <exclude reference="3Q0-6M-s7D"/>
                                 <exclude reference="GLf-gj-bJY"/>
                                 <exclude reference="SZN-Ny-fWl"/>
@@ -2117,6 +2652,7 @@
                                 <exclude reference="X2x-tJ-Dns"/>
                                 <exclude reference="nLP-RX-5C6"/>
                                 <exclude reference="ozn-sO-jzp"/>
+                                <exclude reference="Gnf-vX-wdf"/>
                                 <exclude reference="SbT-dO-UhG"/>
                                 <exclude reference="rbD-4j-lKV"/>
                             </mask>
@@ -2197,7 +2733,6 @@
                                 <include reference="2mD-S7-p6z"/>
                                 <include reference="JJU-Ab-Tnm"/>
                                 <include reference="3Fq-hH-5Uv"/>
-                                <include reference="Gnf-vX-wdf"/>
                                 <include reference="3Q0-6M-s7D"/>
                                 <include reference="GLf-gj-bJY"/>
                                 <include reference="SZN-Ny-fWl"/>
@@ -2211,6 +2746,7 @@
                                 <include reference="X2x-tJ-Dns"/>
                                 <include reference="nLP-RX-5C6"/>
                                 <include reference="ozn-sO-jzp"/>
+                                <include reference="Gnf-vX-wdf"/>
                                 <include reference="SbT-dO-UhG"/>
                                 <include reference="rbD-4j-lKV"/>
                             </mask>
@@ -2232,7 +2768,7 @@
             <objects>
                 <viewController storyboardIdentifier="lefthand" id="pQM-NN-crH" customClass="LeftHandViewController" customModule="Strange_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="71d-RO-ogp">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="S_Calc_background_left" translatesAutoresizingMaskIntoConstraints="NO" id="iKX-Ra-bZu">
@@ -3272,7 +3808,6 @@
                                 <include reference="TfB-HG-THj"/>
                                 <include reference="der-zF-NF1"/>
                                 <include reference="r2A-B9-DqF"/>
-                                <include reference="Ps4-ZC-X6M"/>
                                 <include reference="bgL-5I-E09"/>
                                 <include reference="sEg-cQ-tVX"/>
                                 <include reference="227-i1-hZH"/>
@@ -3320,6 +3855,7 @@
                                 <include reference="Z1m-hy-NL2"/>
                                 <include reference="ago-DJ-Sbd"/>
                                 <include reference="yim-qP-BoS"/>
+                                <include reference="Ps4-ZC-X6M"/>
                                 <include reference="5AP-dU-SKC"/>
                                 <include reference="n8n-eF-jok"/>
                             </mask>
