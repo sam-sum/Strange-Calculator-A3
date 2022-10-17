@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_0" orientation="landscape" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Strange_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="He1-QL-2He" userLabel="landscape Parent View">
@@ -22,9 +22,13 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape_S_Calc_background" translatesAutoresizingMaskIntoConstraints="NO" id="RQD-Sl-m9K">
                                         <rect key="frame" x="0.0" y="0.0" width="760" height="379"/>
                                     </imageView>
-                                    <button opaque="NO" tag="106" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5o-TK-ODg" userLabel="landscape √x">
-                                        <rect key="frame" x="74" y="323.33333333333337" width="48" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5o-TK-ODg" userLabel="landscape √x">
+                                        <rect key="frame" x="74" y="323.33333333333331" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="EHO-Ho-eFf"/>
+                                            <constraint firstAttribute="height" constant="48" id="eT9-cV-0OX"/>
+                                            <constraint firstAttribute="width" secondItem="o5o-TK-ODg" secondAttribute="height" multiplier="1:1" id="lM3-TZ-cv7"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -50,9 +54,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="QpC-ky-H8x"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="106" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDX-cS-A3W" userLabel="landscape x²">
-                                        <rect key="frame" x="50" y="281.33333333333337" width="48" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDX-cS-A3W" userLabel="landscape x²">
+                                        <rect key="frame" x="50" y="281.33333333333331" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="aDX-cS-A3W" secondAttribute="height" multiplier="1:1" id="7z8-gX-9UC"/>
+                                            <constraint firstAttribute="height" constant="48" id="QPk-bs-Afq"/>
+                                            <constraint firstAttribute="width" constant="48" id="ZLk-TQ-dl6"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -78,9 +86,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="WT6-iu-dUJ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="106" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwA-XX-leh" userLabel="landscape π">
-                                        <rect key="frame" x="5" y="256.33333333333337" width="48" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwA-XX-leh" userLabel="landscape π">
+                                        <rect key="frame" x="5" y="256.33333333333331" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="7W6-9j-WW6"/>
+                                            <constraint firstAttribute="width" secondItem="jwA-XX-leh" secondAttribute="height" multiplier="1:1" id="QAX-So-7rZ"/>
+                                            <constraint firstAttribute="height" constant="48" id="YCu-xX-Wbc"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -106,9 +118,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="WNT-og-Whq"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdU-ms-LHx" userLabel="landscape tan">
-                                        <rect key="frame" x="117" y="308.33333333333337" width="52" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdU-ms-LHx" userLabel="landscape tan">
+                                        <rect key="frame" x="117" y="308.33333333333331" width="52" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bdU-ms-LHx" secondAttribute="height" multiplier="1:1" id="74J-Xv-1yc"/>
+                                            <constraint firstAttribute="width" constant="52" id="NWz-Ut-qV5"/>
+                                            <constraint firstAttribute="height" constant="52" id="VDl-hD-Vo5"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -132,9 +148,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="uSt-tB-nbj"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdI-R2-Puu" userLabel="landscape cos">
-                                        <rect key="frame" x="85" y="248.33333333333334" width="52" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdI-R2-Puu" userLabel="landscape cos">
+                                        <rect key="frame" x="85" y="248.33333333333337" width="52" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bdI-R2-Puu" secondAttribute="height" multiplier="1:1" id="9YK-lt-CyF"/>
+                                            <constraint firstAttribute="height" constant="52" id="Zfv-zP-5NM"/>
+                                            <constraint firstAttribute="width" constant="52" id="bGS-GK-3Tc"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -159,9 +179,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="Sax-wN-hLb"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shc-WT-Mda" userLabel="landscape sin">
-                                        <rect key="frame" x="15" y="208.33333333333334" width="52" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shc-WT-Mda" userLabel="landscape sin">
+                                        <rect key="frame" x="15" y="208.33333333333334" width="52" height="52.000000000000028"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="shc-WT-Mda" secondAttribute="height" multiplier="1:1" id="Yhi-CV-ZNa"/>
+                                            <constraint firstAttribute="width" constant="52" id="fPX-vB-Ti7"/>
+                                            <constraint firstAttribute="height" constant="52" id="gnq-Il-Dmb"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -185,9 +209,75 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="SUj-s0-gtM"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1000" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RrC-po-hmj" userLabel="landscape AC">
-                                        <rect key="frame" x="440" y="329.33333333333337" width="48" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjE-TS-GU4" userLabel="landscape %">
+                                        <rect key="frame" x="476" y="200.33333333333334" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="Zkd-XU-yNF"/>
+                                            <constraint firstAttribute="width" secondItem="EjE-TS-GU4" secondAttribute="height" multiplier="1:1" id="b8m-kK-JsB"/>
+                                            <constraint firstAttribute="width" constant="48" id="k7B-Ap-7jQ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="%">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="12" name="Helvetica-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="cQg-13-xSo"/>
+                                            <action selector="btnOperatorsUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m8U-vO-FGY"/>
+                                            <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="wrd-WD-7mS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xys-xP-Wmo" userLabel="landscape +/-">
+                                        <rect key="frame" x="455" y="239.33333333333337" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Xys-xP-Wmo" secondAttribute="height" multiplier="1:1" id="1Rv-Lb-b6P"/>
+                                            <constraint firstAttribute="width" constant="48" id="BdO-TP-8HN"/>
+                                            <constraint firstAttribute="height" constant="48" id="i2l-DS-xjH"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="+/-">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="12" name="Helvetica-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="zkw-MM-bMR"/>
+                                            <action selector="btnOperatorsUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rXI-sZ-7ct"/>
+                                            <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="KTU-Jp-OOZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RrC-po-hmj" userLabel="landscape AC">
+                                        <rect key="frame" x="440" y="329.33333333333331" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="RrC-po-hmj" secondAttribute="height" multiplier="1:1" id="U4b-qj-4i1"/>
+                                            <constraint firstAttribute="width" constant="48" id="Ygt-kf-1K4"/>
+                                            <constraint firstAttribute="height" constant="48" id="siV-c2-Dsm"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -211,9 +301,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="34q-3P-tX7"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47h-Xj-Ae1" userLabel="landscape ←">
-                                        <rect key="frame" x="445" y="281.33333333333337" width="48" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47h-Xj-Ae1" userLabel="landscape ←">
+                                        <rect key="frame" x="445" y="281.33333333333331" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="47h-Xj-Ae1" secondAttribute="height" multiplier="1:1" id="fQr-Of-3JW"/>
+                                            <constraint firstAttribute="width" constant="48" id="jmY-dF-Qh7"/>
+                                            <constraint firstAttribute="height" constant="48" id="pKW-zb-KZq"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -243,9 +337,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="yK7-FT-asJ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6i-xm-bT5" userLabel="landscape ÷">
-                                        <rect key="frame" x="686" y="248.33333333333334" width="34" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6i-xm-bT5" userLabel="landscape ÷">
+                                        <rect key="frame" x="687" y="258" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="5hZ-Hx-Bud"/>
+                                            <constraint firstAttribute="width" secondItem="z6i-xm-bT5" secondAttribute="height" multiplier="1:1" id="9WO-cR-Wc1"/>
+                                            <constraint firstAttribute="width" constant="34" id="zN1-dQ-XLC"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -271,9 +369,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="7u1-5P-Pj3"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4b-7o-smf" userLabel="landscape x">
-                                        <rect key="frame" x="652" y="272.33333333333337" width="34" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4b-7o-smf" userLabel="landscape x">
+                                        <rect key="frame" x="656" y="279" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="G4b-7o-smf" secondAttribute="height" multiplier="1:1" id="5be-2V-UX4"/>
+                                            <constraint firstAttribute="height" constant="34" id="IrA-Y3-OPW"/>
+                                            <constraint firstAttribute="width" constant="34" id="zC5-D5-OKy"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -299,9 +401,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="LvK-eu-tnw"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVD-5s-3yI" userLabel="landscape -">
-                                        <rect key="frame" x="634" y="305.33333333333337" width="34" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVD-5s-3yI" userLabel="landscape -">
+                                        <rect key="frame" x="637" y="309" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="AVD-5s-3yI" secondAttribute="height" multiplier="1:1" id="7Lw-Wz-N6D"/>
+                                            <constraint firstAttribute="width" constant="34" id="Lpk-Ys-1WD"/>
+                                            <constraint firstAttribute="height" constant="34" id="Y7F-tq-oft"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -327,9 +433,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="3M5-Ex-mwf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVL-8O-CnC" userLabel="landscape +">
-                                        <rect key="frame" x="622" y="339.33333333333337" width="34" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVL-8O-CnC" userLabel="landscape +">
+                                        <rect key="frame" x="625" y="339.33333333333331" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="MRn-Gg-Uqp"/>
+                                            <constraint firstAttribute="width" secondItem="LVL-8O-CnC" secondAttribute="height" multiplier="1:1" id="Mmw-Rx-OL4"/>
+                                            <constraint firstAttribute="width" constant="34" id="dn2-mS-gdX"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -355,9 +465,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="aIC-ug-R9H"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhY-BF-se1" userLabel="landscape =">
-                                        <rect key="frame" x="694" y="309.33333333333337" width="60" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhY-BF-se1" userLabel="landscape =">
+                                        <rect key="frame" x="694" y="309.33333333333331" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zhY-BF-se1" secondAttribute="height" multiplier="1:1" id="HFU-Rl-70v"/>
+                                            <constraint firstAttribute="width" constant="60" id="LL1-1A-Hee"/>
+                                            <constraint firstAttribute="height" constant="60" id="z7v-OO-du9"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -383,9 +497,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="E1P-8o-LJA"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2M-P6-D9E" userLabel="landscape 0">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2M-P6-D9E" userLabel="landscape 0">
                                         <rect key="frame" x="708" y="180.33333333333334" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="4II-cf-idz"/>
+                                            <constraint firstAttribute="width" secondItem="p2M-P6-D9E" secondAttribute="height" multiplier="1:1" id="FG3-aI-LBg"/>
+                                            <constraint firstAttribute="height" constant="40" id="Zl4-Ne-hOF"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -409,9 +527,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="8fZ-ay-dSr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19C-yS-C9g" userLabel="landscape 9">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19C-yS-C9g" userLabel="landscape 9">
                                         <rect key="frame" x="660" y="200.33333333333334" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="19C-yS-C9g" secondAttribute="height" multiplier="1:1" id="KgB-fH-y74"/>
+                                            <constraint firstAttribute="width" constant="40" id="TWv-dW-qOl"/>
+                                            <constraint firstAttribute="height" constant="40" id="e5H-Jw-xJW"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -435,9 +557,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="caW-xR-G5W"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FA6-sD-Ei0" userLabel="landscape 8">
-                                        <rect key="frame" x="612" y="233.33333333333334" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FA6-sD-Ei0" userLabel="landscape 8">
+                                        <rect key="frame" x="612" y="233.33333333333334" width="40" height="40.000000000000028"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Bmw-mk-8Hg"/>
+                                            <constraint firstAttribute="height" constant="40" id="bvT-n4-oD8"/>
+                                            <constraint firstAttribute="width" secondItem="FA6-sD-Ei0" secondAttribute="height" multiplier="1:1" id="tQB-Ri-vyH"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -461,35 +587,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="l5b-91-Q46"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Grs-1t-eOA" userLabel="landscape 7">
-                                        <rect key="frame" x="579" y="281.33333333333337" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="7">
-                                                    <attributes>
-                                                        <font key="NSFont" size="12" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="4Zk-At-zH4"/>
-                                            <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jpl-hq-cvE"/>
-                                            <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="77f-8A-iNs"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czM-mZ-a6A" userLabel="landscape 6">
-                                        <rect key="frame" x="563" y="329.33333333333337" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czM-mZ-a6A" userLabel="landscape 6">
+                                        <rect key="frame" x="567" y="329.33333333333331" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="czM-mZ-a6A" secondAttribute="height" multiplier="1:1" id="DXz-B2-CU4"/>
+                                            <constraint firstAttribute="width" constant="40" id="PDi-5K-MAN"/>
+                                            <constraint firstAttribute="height" constant="40" id="lsc-wD-ECD"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -513,9 +617,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="isw-0B-aXc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7S8-GV-3GL" userLabel="landscape 5">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7S8-GV-3GL" userLabel="landscape 5">
                                         <rect key="frame" x="703" y="132.33333333333334" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="V3P-Ac-CO1"/>
+                                            <constraint firstAttribute="height" constant="40" id="bKD-84-siG"/>
+                                            <constraint firstAttribute="width" secondItem="7S8-GV-3GL" secondAttribute="height" multiplier="1:1" id="x96-ha-I9G"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -539,9 +647,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="vC8-Mh-EcU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbr-Vi-IvA" userLabel="landscape 4">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbr-Vi-IvA" userLabel="landscape 4">
                                         <rect key="frame" x="634" y="152.33333333333334" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="pbr-Vi-IvA" secondAttribute="height" multiplier="1:1" id="Red-fe-XAa"/>
+                                            <constraint firstAttribute="width" constant="40" id="UPW-pl-wtp"/>
+                                            <constraint firstAttribute="height" constant="40" id="k6M-Xf-ejA"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -565,9 +677,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="Lkg-BO-qmI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INx-T8-z5g" userLabel="landscape 3">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INx-T8-z5g" userLabel="landscape 3">
                                         <rect key="frame" x="573" y="196.33333333333334" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1KL-mR-GlB"/>
+                                            <constraint firstAttribute="width" constant="40" id="60F-qZ-F4Y"/>
+                                            <constraint firstAttribute="width" secondItem="INx-T8-z5g" secondAttribute="height" multiplier="1:1" id="TeN-Lh-HTk"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -591,9 +707,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="XC9-b5-r4S"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMP-f3-JBB" userLabel="landscape 2">
-                                        <rect key="frame" x="531" y="256.33333333333337" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMP-f3-JBB" userLabel="landscape 2">
+                                        <rect key="frame" x="531" y="256.33333333333331" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="IMP-f3-JBB" secondAttribute="height" multiplier="1:1" id="OZm-RU-qwc"/>
+                                            <constraint firstAttribute="height" constant="40" id="W91-yw-sjq"/>
+                                            <constraint firstAttribute="width" constant="40" id="bht-pJ-Ge3"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -617,9 +737,13 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="VRE-R9-PEL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXn-g0-6lH" userLabel="landscape 1">
-                                        <rect key="frame" x="515" y="323.33333333333337" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXn-g0-6lH" userLabel="landscape 1">
+                                        <rect key="frame" x="515" y="323.33333333333331" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="4IL-cZ-wMx"/>
+                                            <constraint firstAttribute="height" constant="40" id="4gU-6f-GfN"/>
+                                            <constraint firstAttribute="width" secondItem="gXn-g0-6lH" secondAttribute="height" multiplier="1:1" id="zFR-B8-ZgK"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -643,95 +767,11 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="Vvu-FX-dbY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfr-hk-2us" userLabel="landscape .">
-                                        <rect key="frame" x="720" y="239.33333333333334" width="34" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content=".">
-                                                    <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" size="12" name="Helvetica-Bold"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="17"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="mmp-CH-ezq"/>
-                                            <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gho-UZ-kJt"/>
-                                            <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="QHK-Xb-p3P"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="105" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xys-xP-Wmo" userLabel="landscape +/-">
-                                        <rect key="frame" x="455" y="239.33333333333334" width="48" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="+/-">
-                                                    <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" size="12" name="Helvetica-Bold"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="24"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="zkw-MM-bMR"/>
-                                            <action selector="btnOperatorsUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rXI-sZ-7ct"/>
-                                            <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="KTU-Jp-OOZ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="106" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjE-TS-GU4" userLabel="landscape %">
-                                        <rect key="frame" x="476" y="200.33333333333334" width="48" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="%">
-                                                    <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" size="12" name="Helvetica-Bold"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="24"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="cQg-13-xSo"/>
-                                            <action selector="btnOperatorsUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m8U-vO-FGY"/>
-                                            <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="wrd-WD-7mS"/>
-                                        </connections>
-                                    </button>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VPQ-dg-Arm" userLabel="landscape LCD View">
-                                        <rect key="frame" x="10" y="5.3333333333333428" width="569" height="167"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPQ-dg-Arm" userLabel="landscape LCD View">
+                                        <rect key="frame" x="10" y="5.3333333333333286" width="569" height="167"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9b-HE-fyu" userLabel="landscape Steps Label">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9b-HE-fyu" userLabel="landscape Steps Label">
                                                 <rect key="frame" x="21" y="0.0" width="540" height="113"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="0">
                                                         <attributes>
@@ -744,9 +784,11 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgV-hG-f5M" userLabel="landscape Result Label">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgV-hG-f5M" userLabel="landscape Result Label">
                                                 <rect key="frame" x="21" y="121" width="540" height="38"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="Kjp-dh-aq5"/>
+                                                </constraints>
                                                 <attributedString key="attributedText">
                                                     <fragment content="0">
                                                         <attributes>
@@ -759,6 +801,17 @@
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.99885290859999998" green="0.8596545458" blue="0.50966590639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="P9b-HE-fyu" firstAttribute="leading" secondItem="BgV-hG-f5M" secondAttribute="leading" id="6Fx-7n-Lqa"/>
+                                            <constraint firstItem="P9b-HE-fyu" firstAttribute="leading" secondItem="VPQ-dg-Arm" secondAttribute="leading" constant="21" id="BmO-oO-gx3"/>
+                                            <constraint firstItem="P9b-HE-fyu" firstAttribute="top" secondItem="VPQ-dg-Arm" secondAttribute="top" id="Jae-Fq-ffG"/>
+                                            <constraint firstItem="BgV-hG-f5M" firstAttribute="bottom" secondItem="VPQ-dg-Arm" secondAttribute="bottomMargin" id="Ova-2R-vHs"/>
+                                            <constraint firstItem="BgV-hG-f5M" firstAttribute="top" secondItem="P9b-HE-fyu" secondAttribute="bottom" constant="8" id="f6J-kF-eM6"/>
+                                            <constraint firstItem="P9b-HE-fyu" firstAttribute="trailing" secondItem="BgV-hG-f5M" secondAttribute="trailing" id="f8g-qV-eCy"/>
+                                            <constraint firstItem="P9b-HE-fyu" firstAttribute="trailing" secondItem="VPQ-dg-Arm" secondAttribute="trailingMargin" id="j8T-6d-ln9"/>
+                                            <constraint firstAttribute="height" constant="167" id="jWl-Ig-fxV"/>
+                                            <constraint firstAttribute="width" secondItem="VPQ-dg-Arm" secondAttribute="height" multiplier="569:167" id="uHi-FO-zMq"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="20"/>
@@ -778,9 +831,13 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <button opaque="NO" tag="106" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEu-sj-DQ4" userLabel="landscape ran">
-                                        <rect key="frame" x="10" y="315.33333333333337" width="54" height="54"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEu-sj-DQ4" userLabel="landscape ran">
+                                        <rect key="frame" x="10" y="315.33333333333331" width="54" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ZEu-sj-DQ4" secondAttribute="height" multiplier="1:1" id="dr3-sS-nhQ"/>
+                                            <constraint firstAttribute="width" constant="54" id="eMp-14-igc"/>
+                                            <constraint firstAttribute="height" constant="54" id="o1D-vL-b3d"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
@@ -806,13 +863,131 @@
                                             <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="tsu-P7-eY2"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfr-hk-2us" userLabel="landscape .">
+                                        <rect key="frame" x="723" y="241" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Hfr-hk-2us" secondAttribute="height" multiplier="1:1" id="Tzv-MT-XIU"/>
+                                            <constraint firstAttribute="width" constant="34" id="Un6-JF-5Qm"/>
+                                            <constraint firstAttribute="height" constant="34" id="yg1-Tj-6ba"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content=".">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="12" name="Helvetica-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="mmp-CH-ezq"/>
+                                            <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gho-UZ-kJt"/>
+                                            <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="QHK-Xb-p3P"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Grs-1t-eOA" userLabel="landscape 7">
+                                        <rect key="frame" x="582" y="281.33333333333331" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Grs-1t-eOA" secondAttribute="height" multiplier="1:1" id="QdT-e9-fww"/>
+                                            <constraint firstAttribute="width" constant="40" id="eHn-0A-sY4"/>
+                                            <constraint firstAttribute="height" constant="40" id="iOJ-Xn-Z7n"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="7">
+                                                    <attributes>
+                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="4Zk-At-zH4"/>
+                                            <action selector="btnNumbersUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jpl-hq-cvE"/>
+                                            <action selector="btnUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="77f-8A-iNs"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="Hfr-hk-2us" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-138" id="0Pm-N2-2vV"/>
+                                    <constraint firstItem="zhY-BF-se1" firstAttribute="leading" secondItem="RQD-Sl-m9K" secondAttribute="trailing" constant="-66" id="1MI-AD-U9t"/>
                                     <constraint firstAttribute="width" secondItem="RQD-Sl-m9K" secondAttribute="width" id="2C0-Tj-RNo"/>
+                                    <constraint firstItem="EjE-TS-GU4" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-178.66666666666666" id="2Ol-at-r0U"/>
+                                    <constraint firstItem="AVD-5s-3yI" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-70" id="4Td-35-AZ4"/>
+                                    <constraint firstItem="Hfr-hk-2us" firstAttribute="leading" secondItem="RQD-Sl-m9K" secondAttribute="trailing" constant="-37" id="8Q7-Yw-g1j"/>
+                                    <constraint firstItem="FA6-sD-Ei0" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-145.66666666666666" id="9qq-vG-oUF"/>
+                                    <constraint firstItem="RQD-Sl-m9K" firstAttribute="top" secondItem="7S8-GV-3GL" secondAttribute="bottom" constant="-172.33333333333334" id="AHf-Yr-o1n"/>
+                                    <constraint firstItem="pbr-Vi-IvA" firstAttribute="leading" secondItem="RQD-Sl-m9K" secondAttribute="trailing" constant="-126" id="Am5-Yw-ogv"/>
+                                    <constraint firstItem="aDX-cS-A3W" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-97.666666666666629" id="CSd-pO-W5P"/>
+                                    <constraint firstItem="Grs-1t-eOA" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-97.666666666666629" id="Cmd-p5-Hfv"/>
+                                    <constraint firstItem="p2M-P6-D9E" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-198.66666666666666" id="HIN-bc-5lF"/>
+                                    <constraint firstItem="zhY-BF-se1" firstAttribute="leading" secondItem="AVD-5s-3yI" secondAttribute="trailing" constant="23" id="HRq-Ph-oRp"/>
+                                    <constraint firstItem="czM-mZ-a6A" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-49.666666666666629" id="IUy-Nq-tRd"/>
+                                    <constraint firstItem="LVL-8O-CnC" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-39.666666666666629" id="KHh-uF-rrP"/>
+                                    <constraint firstItem="47h-Xj-Ae1" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-97.666666666666629" id="Kkw-e3-Ndi"/>
+                                    <constraint firstItem="ZEu-sj-DQ4" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-63.666666666666629" id="L5T-Da-hto"/>
+                                    <constraint firstItem="p2M-P6-D9E" firstAttribute="leading" secondItem="RQD-Sl-m9K" secondAttribute="trailing" constant="-52" id="L5q-zG-cRV"/>
+                                    <constraint firstItem="jwA-XX-leh" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-122.66666666666663" id="Lew-JS-9ay"/>
+                                    <constraint firstItem="RQD-Sl-m9K" firstAttribute="leading" secondItem="jwA-XX-leh" secondAttribute="trailing" constant="-53" id="Mtj-5e-ruU"/>
+                                    <constraint firstItem="G4b-7o-smf" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-100" id="NGR-fd-9Z9"/>
+                                    <constraint firstItem="7S8-GV-3GL" firstAttribute="leading" secondItem="RQD-Sl-m9K" secondAttribute="trailing" constant="-57" id="OeE-Xg-iVL"/>
+                                    <constraint firstItem="RrC-po-hmj" firstAttribute="leading" secondItem="RQD-Sl-m9K" secondAttribute="trailing" constant="-320" id="POb-y8-YJJ"/>
+                                    <constraint firstItem="INx-T8-z5g" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-182.66666666666666" id="T3V-yV-8LJ"/>
+                                    <constraint firstItem="gXn-g0-6lH" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-55.666666666666629" id="UXJ-xY-AWY"/>
+                                    <constraint firstItem="zhY-BF-se1" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-69.666666666666686" id="Upw-fP-OAd"/>
+                                    <constraint firstItem="czM-mZ-a6A" firstAttribute="leading" secondItem="RQD-Sl-m9K" secondAttribute="trailing" constant="-193" id="UxE-4B-SX0"/>
+                                    <constraint firstItem="RQD-Sl-m9K" firstAttribute="leading" secondItem="aDX-cS-A3W" secondAttribute="trailing" constant="-98" id="W72-bE-GR8"/>
                                     <constraint firstAttribute="height" secondItem="RQD-Sl-m9K" secondAttribute="height" id="WgF-I3-cok"/>
+                                    <constraint firstItem="z6i-xm-bT5" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-121" id="Wii-DE-BoL"/>
+                                    <constraint firstItem="RQD-Sl-m9K" firstAttribute="leading" secondItem="shc-WT-Mda" secondAttribute="trailing" constant="-67" id="ZPb-wE-Cwu"/>
                                     <constraint firstItem="RQD-Sl-m9K" firstAttribute="centerY" secondItem="He1-QL-2He" secondAttribute="centerY" id="acw-n6-ZjY"/>
+                                    <constraint firstItem="FA6-sD-Ei0" firstAttribute="leading" secondItem="RQD-Sl-m9K" secondAttribute="trailing" constant="-148" id="bNm-pw-g8W"/>
+                                    <constraint firstItem="47h-Xj-Ae1" firstAttribute="leading" secondItem="RQD-Sl-m9K" secondAttribute="trailing" constant="-315" id="bs9-uG-MXf"/>
+                                    <constraint firstItem="RQD-Sl-m9K" firstAttribute="leading" secondItem="bdI-R2-Puu" secondAttribute="trailing" constant="-137" id="df7-He-ZMd"/>
+                                    <constraint firstItem="LVL-8O-CnC" firstAttribute="leading" secondItem="RQD-Sl-m9K" secondAttribute="trailing" constant="-135" id="diK-yt-snO"/>
+                                    <constraint firstItem="shc-WT-Mda" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-170.66666666666666" id="fGC-gg-e0v"/>
+                                    <constraint firstItem="RQD-Sl-m9K" firstAttribute="leading" secondItem="VPQ-dg-Arm" secondAttribute="trailing" constant="-579" id="fGa-9w-fv9"/>
+                                    <constraint firstItem="EjE-TS-GU4" firstAttribute="leading" secondItem="RQD-Sl-m9K" secondAttribute="trailing" constant="-284" id="fez-OF-f5r"/>
+                                    <constraint firstItem="gXn-g0-6lH" firstAttribute="leading" secondItem="RQD-Sl-m9K" secondAttribute="trailing" constant="-245" id="fip-su-2sZ"/>
+                                    <constraint firstItem="IMP-f3-JBB" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-122.66666666666663" id="g1h-3Z-V61"/>
+                                    <constraint firstItem="RQD-Sl-m9K" firstAttribute="leading" secondItem="bdU-ms-LHx" secondAttribute="trailing" constant="-169" id="g4F-eS-Ufd"/>
+                                    <constraint firstItem="o5o-TK-ODg" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-55.666666666666629" id="gtl-Du-t8U"/>
+                                    <constraint firstItem="19C-yS-C9g" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-178.66666666666666" id="hPq-JQ-Jua"/>
+                                    <constraint firstItem="Xys-xP-Wmo" firstAttribute="leading" secondItem="RQD-Sl-m9K" secondAttribute="trailing" constant="-305" id="ibO-yY-3MC"/>
+                                    <constraint firstItem="RQD-Sl-m9K" firstAttribute="leading" secondItem="ZEu-sj-DQ4" secondAttribute="trailing" constant="-64" id="iem-Su-x8G"/>
+                                    <constraint firstItem="RQD-Sl-m9K" firstAttribute="top" secondItem="pbr-Vi-IvA" secondAttribute="bottom" constant="-192.33333333333334" id="jQ6-I8-lip"/>
+                                    <constraint firstItem="G4b-7o-smf" firstAttribute="leading" secondItem="RQD-Sl-m9K" secondAttribute="trailing" constant="-104" id="kAc-jj-nEg"/>
+                                    <constraint firstItem="bdU-ms-LHx" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-70.666666666666629" id="kUI-gV-uAO"/>
+                                    <constraint firstItem="RQD-Sl-m9K" firstAttribute="leading" secondItem="o5o-TK-ODg" secondAttribute="trailing" constant="-122" id="lMl-a5-SVg"/>
+                                    <constraint firstItem="19C-yS-C9g" firstAttribute="leading" secondItem="RQD-Sl-m9K" secondAttribute="trailing" constant="-100" id="lbh-Ka-Btd"/>
+                                    <constraint firstItem="bdI-R2-Puu" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-130.66666666666666" id="n0v-p1-cTx"/>
+                                    <constraint firstItem="RQD-Sl-m9K" firstAttribute="top" secondItem="VPQ-dg-Arm" secondAttribute="bottom" constant="-172.33333333333334" id="nGv-B8-9Nv"/>
+                                    <constraint firstItem="IMP-f3-JBB" firstAttribute="leading" secondItem="RQD-Sl-m9K" secondAttribute="trailing" constant="-229" id="nUr-Dh-ptB"/>
                                     <constraint firstItem="RQD-Sl-m9K" firstAttribute="centerX" secondItem="He1-QL-2He" secondAttribute="centerX" id="pNR-Jx-yiB"/>
+                                    <constraint firstItem="z6i-xm-bT5" firstAttribute="leading" secondItem="RQD-Sl-m9K" secondAttribute="trailing" constant="-73" id="rGP-lM-syG"/>
+                                    <constraint firstItem="INx-T8-z5g" firstAttribute="leading" secondItem="RQD-Sl-m9K" secondAttribute="trailing" constant="-187" id="rXE-Ry-crl"/>
+                                    <constraint firstItem="Grs-1t-eOA" firstAttribute="leading" secondItem="RQD-Sl-m9K" secondAttribute="trailing" constant="-178" id="sG9-OV-wG3"/>
+                                    <constraint firstItem="Xys-xP-Wmo" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-139.66666666666666" id="tOd-3L-UDC"/>
+                                    <constraint firstItem="RrC-po-hmj" firstAttribute="top" secondItem="RQD-Sl-m9K" secondAttribute="bottom" constant="-49.666666666666629" id="ydO-kk-5EH"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -823,6 +998,8 @@
                                         <exclude reference="bdU-ms-LHx"/>
                                         <exclude reference="bdI-R2-Puu"/>
                                         <exclude reference="shc-WT-Mda"/>
+                                        <exclude reference="EjE-TS-GU4"/>
+                                        <exclude reference="Xys-xP-Wmo"/>
                                         <exclude reference="RrC-po-hmj"/>
                                         <exclude reference="47h-Xj-Ae1"/>
                                         <exclude reference="z6i-xm-bT5"/>
@@ -833,18 +1010,16 @@
                                         <exclude reference="p2M-P6-D9E"/>
                                         <exclude reference="19C-yS-C9g"/>
                                         <exclude reference="FA6-sD-Ei0"/>
-                                        <exclude reference="Grs-1t-eOA"/>
                                         <exclude reference="czM-mZ-a6A"/>
                                         <exclude reference="7S8-GV-3GL"/>
                                         <exclude reference="pbr-Vi-IvA"/>
                                         <exclude reference="INx-T8-z5g"/>
                                         <exclude reference="IMP-f3-JBB"/>
                                         <exclude reference="gXn-g0-6lH"/>
-                                        <exclude reference="Hfr-hk-2us"/>
-                                        <exclude reference="Xys-xP-Wmo"/>
-                                        <exclude reference="EjE-TS-GU4"/>
                                         <exclude reference="VPQ-dg-Arm"/>
                                         <exclude reference="ZEu-sj-DQ4"/>
+                                        <exclude reference="Hfr-hk-2us"/>
+                                        <exclude reference="Grs-1t-eOA"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
@@ -856,6 +1031,8 @@
                                         <include reference="bdU-ms-LHx"/>
                                         <include reference="bdI-R2-Puu"/>
                                         <include reference="shc-WT-Mda"/>
+                                        <include reference="EjE-TS-GU4"/>
+                                        <include reference="Xys-xP-Wmo"/>
                                         <include reference="RrC-po-hmj"/>
                                         <include reference="47h-Xj-Ae1"/>
                                         <include reference="z6i-xm-bT5"/>
@@ -866,18 +1043,16 @@
                                         <include reference="p2M-P6-D9E"/>
                                         <include reference="19C-yS-C9g"/>
                                         <include reference="FA6-sD-Ei0"/>
-                                        <include reference="Grs-1t-eOA"/>
                                         <include reference="czM-mZ-a6A"/>
                                         <include reference="7S8-GV-3GL"/>
                                         <include reference="pbr-Vi-IvA"/>
                                         <include reference="INx-T8-z5g"/>
                                         <include reference="IMP-f3-JBB"/>
                                         <include reference="gXn-g0-6lH"/>
-                                        <include reference="Hfr-hk-2us"/>
-                                        <include reference="Xys-xP-Wmo"/>
-                                        <include reference="EjE-TS-GU4"/>
                                         <include reference="VPQ-dg-Arm"/>
                                         <include reference="ZEu-sj-DQ4"/>
+                                        <include reference="Hfr-hk-2us"/>
+                                        <include reference="Grs-1t-eOA"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1894,7 +2069,6 @@
                                 <exclude reference="5q5-5p-KbQ"/>
                                 <exclude reference="G1x-Xb-6u4"/>
                                 <exclude reference="dOa-cC-ZGY"/>
-                                <exclude reference="Gnf-vX-wdf"/>
                                 <exclude reference="LLK-dM-12U"/>
                                 <exclude reference="h8e-nj-Lgj"/>
                                 <exclude reference="vCp-Tl-40U"/>
@@ -1929,6 +2103,7 @@
                                 <exclude reference="2mD-S7-p6z"/>
                                 <exclude reference="JJU-Ab-Tnm"/>
                                 <exclude reference="3Fq-hH-5Uv"/>
+                                <exclude reference="Gnf-vX-wdf"/>
                                 <exclude reference="3Q0-6M-s7D"/>
                                 <exclude reference="GLf-gj-bJY"/>
                                 <exclude reference="SZN-Ny-fWl"/>
@@ -1988,7 +2163,6 @@
                                 <include reference="5q5-5p-KbQ"/>
                                 <include reference="G1x-Xb-6u4"/>
                                 <include reference="dOa-cC-ZGY"/>
-                                <include reference="Gnf-vX-wdf"/>
                                 <include reference="LLK-dM-12U"/>
                                 <include reference="h8e-nj-Lgj"/>
                                 <include reference="vCp-Tl-40U"/>
@@ -2023,6 +2197,7 @@
                                 <include reference="2mD-S7-p6z"/>
                                 <include reference="JJU-Ab-Tnm"/>
                                 <include reference="3Fq-hH-5Uv"/>
+                                <include reference="Gnf-vX-wdf"/>
                                 <include reference="3Q0-6M-s7D"/>
                                 <include reference="GLf-gj-bJY"/>
                                 <include reference="SZN-Ny-fWl"/>
@@ -2057,7 +2232,7 @@
             <objects>
                 <viewController storyboardIdentifier="lefthand" id="pQM-NN-crH" customClass="LeftHandViewController" customModule="Strange_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="71d-RO-ogp">
-                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="S_Calc_background_left" translatesAutoresizingMaskIntoConstraints="NO" id="iKX-Ra-bZu">
