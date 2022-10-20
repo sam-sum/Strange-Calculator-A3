@@ -24,6 +24,7 @@ class Calculation {
     private var isEndCalcuation = true
     private let maxStepsChar = 15
     private let errorMsgOverflow = "Overflow"
+    private let errorMsgNan = "Not a number"
     private let pi = "3.141592654"
     
     private init(){}
@@ -47,7 +48,7 @@ class Calculation {
     // *****
     func handleNumberInput(inNum: String, outChar: Int) -> (String, String) {
         // do nothing if overflow error occurred
-        if inputString == errorMsgOverflow {
+        if inputString == errorMsgOverflow || inputString == errorMsgNan {
             return (String(inputString.suffix(outChar)), result)
         }
         // if a calculation has been completed (isEndCalcuation), the input digit will replace the previous steps
@@ -106,7 +107,7 @@ class Calculation {
         case "←":
              // back key pressed
             // do nothing if overflow error occurred
-            if inputString == errorMsgOverflow {
+            if inputString == errorMsgOverflow || inputString == errorMsgNan {
                 return (String(inputString.suffix(outChar)), result)
             }
             //remove the square sign from the last operand (if any)
@@ -141,7 +142,7 @@ class Calculation {
     // *****
     func handleOperaters(inKey: String, outChar: Int) -> (String, String) {
         // do nothing if overflow error occurred
-        if inputString == errorMsgOverflow {
+        if inputString == errorMsgOverflow || inputString == errorMsgNan {
             return (String(inputString.suffix(outChar)), result)
         }
 
@@ -681,6 +682,9 @@ class Calculation {
             } else {
                 result = errorMsgOverflow
             }
+        }
+        if result == "nan" {
+            result = errorMsgNan
         }
         if result == inputString {
             result = ""
